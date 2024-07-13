@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de frases</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  </head>
+  <body>
+    <!-- Nav -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-center">
+          <div class="navbar-logo">
+            <img src="img/logo.png" alt="Logo" />
+          </div>
+          <div class="navbar-text">
+            <span>ENCRIPTADOR</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- main -->
+    <main>
+      <div class="container">
+        <h1>Mensajes Encantados</h1>
+        <div class="input-output">
+          <div class="input-area">
+            <textarea
+              id="inputText"
+              class="output-textarea-entrada"
+              placeholder="Escribe aquí tu frase..."
+            ></textarea>
+            <div class="advertencia">
+                <p><i class="fas fa-exclamation-circle"></i> Solo letras minúsculas y sin acentos</p>
+            </div>
+            
+            <div class="buttons">
+              <button class="button-encriptra" onclick="encrypt()">
+                Encriptar
+              </button>
+              <button class="button-desencriptar" onclick="decrypt()">
+                Desencriptar
+              </button>
+            </div>
+          </div>
+
+          <div class="result-card" id="resultCard">
+            <div class="card-content" id="cardContent">
+              <img src="img/fondo.png " alt="Imagen desactivada" />
+              <h3>Ningún mensaje fue encontrado</h3>
+
+              <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <textarea
+              id="outputText"
+              class="output-textarea-salida"
+              placeholder="Aquí se mostrará el resultado..."
+              readonly
+            ></textarea>
+
+            <div class="buttons-center">
+              <button class="button-copy" onclick="copyToClipboard()">
+                Copiar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>Todos los drechos reservados @Alura</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
